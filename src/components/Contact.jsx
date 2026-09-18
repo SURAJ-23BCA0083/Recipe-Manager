@@ -43,8 +43,8 @@ const Contact = () => {
                             <i className="ri-mail-line text-2xl text-accent"></i>
                         </div>
                         <h3 className="font-bold text-primary mb-2">Email</h3>
-                        <a href="mailto:hello@recipehub.com" className="text-neutral hover:text-accent transition">
-                            hello@recipehub.com
+                        <a href="shahsuraj6476@gmail.com" className="text-neutral hover:text-accent transition">
+                            shahsuraj6476@gmail.com
                         </a>
                     </div>
 
@@ -54,8 +54,8 @@ const Contact = () => {
                             <i className="ri-phone-line text-2xl text-accent"></i>
                         </div>
                         <h3 className="font-bold text-primary mb-2">Phone</h3>
-                        <a href="tel:+1234567890" className="text-neutral hover:text-accent transition">
-                            +1 (234) 567-890
+                        <a href="Mob:+919897252541" className="text-neutral hover:text-accent transition">
+                           +91 989-725-2541
                         </a>
                     </div>
 
@@ -65,7 +65,7 @@ const Contact = () => {
                             <i className="ri-map-pin-line text-2xl text-accent"></i>
                         </div>
                         <h3 className="font-bold text-primary mb-2">Address</h3>
-                        <p className="text-neutral">123 Culinary Lane<br/>Food City, FC 12345</p>
+                        <p className="text-neutral">Dehradun, Uttrakhand<br/>Food City, Ganta Ghar</p>
                     </div>
                 </div>
 
