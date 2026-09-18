@@ -1,9 +1,10 @@
 import Card from "./Card";
 import { Link, useLocation } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useContext } from "react";
+import { RecipeContext } from "../store/RecipeContext";
 
 const Recipes = () => {
-    const { recipes } = useSelector((state) => state.recipeReducer);
+    const { recipes } = useContext(RecipeContext);
     const { pathname } = useLocation();
 
     return (

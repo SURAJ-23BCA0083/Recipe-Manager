@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import Nav from "./components/Nav";
 
 import { Route, Routes } from "react-router-dom";
@@ -9,14 +9,13 @@ import Create from "./components/Create";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Update from "./components/Update";
-import { useDispatch } from "react-redux";
-import { asyncgetrecipies } from "./store/actions/recipeActions";
+import { RecipeContext } from "./store/RecipeContext";
 
 const App = () => {
-    const dispatch = useDispatch();
+    const { getRecipes } = useContext(RecipeContext);
 
     useEffect(() => {
-        dispatch(asyncgetrecipies());
+        getRecipes();
     }, []);
 
     return (

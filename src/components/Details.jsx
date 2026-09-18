@@ -1,14 +1,13 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
-import { useDispatch, useSelector } from "react-redux";
-import { asyncgetrecipies } from "../store/actions/recipeActions";
+import { useContext } from "react";
+import { RecipeContext } from "../store/RecipeContext";
 
 const Details = () => {
     const navigate = useNavigate();
-    const dispatch = useDispatch();
+    const { recipes, getRecipes } = useContext(RecipeContext);
 
     const params = useParams();
-    const { recipes } = useSelector((state) => state.recipeReducer);
     const recipe = recipes.find((r) => r.id == params.id);
 
     const DeleteHandler = () => {
@@ -16,7 +15,7 @@ const Details = () => {
             "recipes",
             JSON.stringify(recipes.filter((r) => r.id != params.id))
         );
-        dispatch(asyncgetrecipies());
+        getRecipes();
         toast.success("Recipe Deleted Successfully!");
         navigate("/recipes");
     };

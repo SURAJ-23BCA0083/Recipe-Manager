@@ -1,14 +1,12 @@
 import { nanoid } from "nanoid";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { asyncgetrecipies } from "../store/actions/recipeActions";
+import { RecipeContext } from "../store/RecipeContext";
 
 const Create = () => {
-    const dispatch = useDispatch();
     const navigate = useNavigate();
-    const { recipes } = useSelector((state) => state.recipeReducer);
+    const { recipes, getRecipes } = useContext(RecipeContext);
 
     const [image, setimage] = useState("");
     const [title, settitle] = useState("");
@@ -36,7 +34,7 @@ const Create = () => {
             "recipes",
             JSON.stringify([...recipes, newRecipe])
         );
-        dispatch(asyncgetrecipies());
+        getRecipes();
         toast.success("Recipe Created Successfully!");
         navigate("/recipes");
     };
