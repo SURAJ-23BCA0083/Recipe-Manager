@@ -65,7 +65,7 @@ const Footer = () => {
 
                 {/* Divider */}
                 <div className="border-t border-gray-700 pt-8 text-center text-gray-400">
-                    <p>&copy; 2024 RecipeHub. All rights reserved. | Made with <i className="ri-heart-fill text-accent"></i></p>
+                    <p>&copy; 2026 RecipeHub. All rights reserved. | Made with <i className="ri-heart-fill text-accent"></i></p>
                 </div>
             </div>
         </div>
